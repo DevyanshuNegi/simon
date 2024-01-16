@@ -69,10 +69,7 @@ function incLevel() {
         setTimeout(function () {
           $("#" + colors[rand]).removeClass("pressed");
         }, 100);
-        }, 500);
-
-
-
+    }, 500);
 }
 
 
@@ -92,11 +89,6 @@ $(".btn").on("click", function () {
                 $("#" + colors[num]).removeClass("pressed");
             }, 100);
             console.log("sahi hai");
-
-            // yaha index badhega;
-            // oor equal ho jaega oor fir dusra if chlega 
-            // usko yaha bhi laga sakta hai loop ke baad
-            // yaha loop karna hai; shyd
         }
 
         else {
@@ -112,8 +104,11 @@ $(".btn").on("click", function () {
         // yaha se reset karna hai game : 
         level = 0;
         alive = false;
+        index = 0;
+        orderList = []; // change2
+            
         $("#level-title").text("Game Over");
-        setInterval(() => {
+        setTimeout(() => {
             $("#level-title").text("Press A Key to Start");
         }, 1000);
 
@@ -121,7 +116,7 @@ $(".btn").on("click", function () {
     }
 }
 
-    if (index == orderList.length) {
+    if (index == orderList.length && alive) {
         // console.log("under sec if");
         incLevel();
 
