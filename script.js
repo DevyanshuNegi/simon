@@ -133,3 +133,23 @@ $(".btn").on("click", function () {
 }
     
 });
+$(".touch").on("click",function () { // same code as key down code
+    if (!alive) {
+      alive = true;
+      console.log("key pressed");
+      level++;
+      $("h1").text("Level " + level);
+
+      rand = Math.floor(Math.random() * 4);
+      orderList.push(rand);
+      console.log(rand);
+
+      var aud = new Audio("./sounds/" + rand + ".mp3");
+      aud.play();
+      $("#" + colors[rand]).addClass("pressed");
+
+      setTimeout(function () {
+        $("#" + colors[rand]).removeClass("pressed");
+      }, 100);
+    }
+})
