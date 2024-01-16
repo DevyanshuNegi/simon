@@ -65,3 +65,18 @@ body {
     margin:auto;
   }
 }
+
+.touch{
+  font-size: larger;
+  font-weight: 700;
+  font-family: sans-serif;
+  padding: 20px;
+  margin-top: 50px;
+  background-color: rgb(17, 161, 250);
+  background-color: purple;
+  color: #FEF2BF;
+  width: 20%;
+  margin-left: 38%;
+  margin-right: 40%;
+  border-radius: 10px;
+}
